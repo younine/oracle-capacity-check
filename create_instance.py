@@ -34,8 +34,12 @@ def try_create(compute):
             oci.core.models.LaunchInstanceDetails(
                 compartment_id=COMPARTMENT_ID,
                 availability_domain=AVAILABILITY_DOMAIN,
-                display_name=f"micro-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
-                shape="VM.Standard.E2.1.Micro",
+                display_name=f"a1-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
+                shape="VM.Standard.A1.Flex",
+                shape_config=oci.core.models.LaunchInstanceShapeConfigDetails(
+                    ocpus=4,
+                    memory_in_gbs=24,
+                ),
                 source_details=oci.core.models.InstanceSourceViaImageDetails(
                     image_id=IMAGE_ID,
                     source_type="image",
