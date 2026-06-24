@@ -19,7 +19,7 @@ SSH_PUBLIC_KEY      = os.environ["OCI_SSH_PUBLIC_KEY"]
 AVAILABILITY_DOMAIN = os.environ["OCI_AVAILABILITY_DOMAIN"]
 
 RETRY_INTERVAL_SEC = 60
-MAX_ATTEMPTS       = 10
+MAX_ATTEMPTS       = 5
 
 logging.basicConfig(
     level=logging.INFO,
