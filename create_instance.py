@@ -60,6 +60,8 @@ def try_create(compute):
             log.warning("Rate limit — 재시도 예정")
         else:
             log.error(f"API 오류 {e.status}: {e.message}")
+            log.error(f"서비스 코드: {e.code}")
+            log.error(f"전체 오류: {str(e)}")
         return None
 
 
