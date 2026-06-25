@@ -37,7 +37,7 @@ def try_create(compute):
                 display_name=f"a1-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
                 shape="VM.Standard.A1.Flex",
                 shape_config=oci.core.models.LaunchInstanceShapeConfigDetails(
-                    ocpus=4,
+                    ocpus=2,
                     memory_in_gbs=24,
                 ),
                 source_details=oci.core.models.InstanceSourceViaImageDetails(
