@@ -38,7 +38,7 @@ def try_create(compute):
                 shape="VM.Standard.A1.Flex",
                 shape_config=oci.core.models.LaunchInstanceShapeConfigDetails(
                     ocpus=2,
-                    memory_in_gbs=24,
+                    memory_in_gbs=12,
                 ),
                 source_details=oci.core.models.InstanceSourceViaImageDetails(
                     image_id=IMAGE_ID,
